@@ -25,10 +25,15 @@ body {
     font-weight: 500;
 }
 .button {
-    padding: 7px;
+    padding: 10px;
     font-weight: 700;
 }
 
 input {
     padding: 5px;
+}
+
+a {
+    padding: 5px;
+    text-decoration: none;
 }
