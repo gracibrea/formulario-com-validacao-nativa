@@ -13,7 +13,8 @@
 
     <h1>Cadastro com validação nativa</h1>    
 
-    <form method="POST">
+    <form method="post" action="#.php" enctype="multipart/form-data"><!--Esse enctype converte o arquivo enviado em bytes para o envio-->
+        <input type="hidden" name="country" value="BR"><!--campo oculto para o usuário-->
         <fieldset>
             <legend> Dados Pessoais </legend>
             <label>
@@ -27,6 +28,10 @@
             <label>
                 Data de nascimento: <br>
                 <input type="date" name="birthdate" max="2003-11-01"> <!-- data mais rescente permitida-->
+            </label><br>
+            <label>
+                Foto: <br>
+                <input type="file" name="photo" accept="image/*"><!--aceita somente arquivos de imagem só funciona no método POST, não no GET-->
             </label><br>
             <label>
                 Idade: <br>
