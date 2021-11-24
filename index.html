@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Roboto+Slab:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Validações Nativas</title>
+</head>
+<body>
+
+    <h1>Cadastro com validação nativa</h1>    
+
+    <form method="POST">
+        <fieldset>
+            <legend> Dados Pessoais </legend>
+            <label>
+                Nome: <br>
+                <input type="text" name="name" required>
+            </label><br>
+            <label>
+                Sobrenome: <br>
+                <input type="text" name="lastname" minlength="7">
+            </label><br>
+            <label>
+                Data de nascimento: <br>
+                <input type="date" name="birthdate" max="2003-11-01"> <!-- data mais rescente permitida-->
+            </label><br>
+            <label>
+                Idade: <br>
+                <!--  <input type="number" name="age" step="2">  pula de 2 em 2 neste caso, em numeros pares-->
+                <input type="number" name="age" min="18" max="120">
+            </label><br>
+            <label>
+                E-mail: <br>
+                <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="endereço de e-mail">
+            </label><br>
+        </fieldset>
+
+        
+            <fieldset>
+                <legend> Dados Profissionais </legend>
+                <label>
+                    Empresa: <br>
+                    <input type="text" name="company" maxlength="12">
+                </label><br>
+                <label>
+                    Cargo: <br>
+                    <input type="text" name="jobtitle" required>
+                </label><br>
+            </fieldset>
+        
+        <input class="button" type="submit" value="Cadastrar">
+    </form>
+    
+    <a href="https://github.com/gracibrea/formulario">Visite o repositório</a>
+    
+</body>
+</html>
